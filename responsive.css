@@ -29,6 +29,13 @@ button{
     cursor: pointer;
 }
 
+
+/* colors */
+
+.bgcolorviolet{
+    background-color: rgb(151,146,228);
+}
+
 /* header */
 
 header{
@@ -48,8 +55,19 @@ header{
     align-items: center;
 }
 
+.navbar  a{
+    display:none;
+    
+}
 
+.navbar  button{
+    display: none;
+
+}
 /* main */
+
+
+/*  jumbotron cards */
 
 .jumbotron{
     min-height: 1200px;
@@ -67,23 +85,95 @@ header{
     background-color: red;
     margin: 10px;
     border-radius: 20px;
-  
 }
 
 div:first-child{
     height: 608px;
 }
 
+/* strategic planning */
+
+.strategic-planning{
+    min-height: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.strategic-planning > div{
+    width: 60%;
+    height: 640px;
+    background-color: green;
+    border-radius: 60px;
+    margin: 10px;
+}
+
+
+/* partners */
+
 
 /* responsive-mobile first */
 
-/* header width 480*/
+/*width 480px*/
 
 @media screen and (min-width: 480px)  {
+
+
+
+
+
+.jumbotron{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    padding-top: 200px;
+   
+}
+.jumbotron > div{
+    flex-basis: 25%;
+    height: 490px;
+    margin: 7px;
+}
+div:first-child{
+    flex-basis: 50%;
+    height: 490px;
+}
+
+
 
 }
 
-@media screen and (min-width: 480px)  {
+/* width 768px */
+
+@media screen and (min-width: 992px)  {
+
+
+    .navbar > i {
+        display: none;
+    }
+
+    .navbar a{
+        display: inline-block;
+        margin-left: 30px;
+        text-decoration: none;
+        color: white;
+    }
+    .navbar button{
+        display: inline-block;
+        margin-left: 30px;
+    }
+
+    .jumbotron > div{
+        flex-basis: 25%;
+        height: 490px;
+        margin: 7px;
+    }
+    div:first-child{
+        flex-basis: 50%;
+        height: 490px;
+    }
+
 
 }
 
