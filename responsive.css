@@ -65,7 +65,9 @@ header{
     display: none;
 
 }
+
 /* main */
+
 main{
     margin-top: 100px;
 }
@@ -80,7 +82,6 @@ main{
     align-items: center;
     margin-bottom:30px;
     padding: 0 20px;
-
 }
 
 .jumbotron > div{
@@ -161,9 +162,39 @@ main{
 }
 
 
+/* aboutus */
+
+.aboutus{
+    height: 1900px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    margin-top: 40px;
+}
+
+.infoaboutus{
+    height: 70%;
+    background-color: red;
+}
+
+.aboutuspic{
+    height: 30%;
+    background-color: green;
+}
+
+/* get started */
+
+.getstarted{
+    height: 500px;
+}
 
 
+/* footer */
 
+footer{
+    height: 300px;
+    background-color: black;
+}
 
 
 /* responsive mobile-first */
@@ -197,9 +228,11 @@ main{
     }
     
     /* partners */
+
     .partner{
         min-height: 857px;
     }
+
     .partner > div{
 
         height:195px;
@@ -231,8 +264,31 @@ main{
         padding-top: 30px;
        
     }
+    
+    /* aboutus */
+
+    .aboutus{
+        height: 800px;
+        display: flex;
+        flex-direction: row;
+        margin-bottom:40px;
+        padding: 0 20px;
+        margin-top: 40px;
+    }
+    
+    .infoaboutus{
+        flex-basis: 60%;
+        background-color: red;
+        
+    }
+    
+    .aboutuspic{
+      flex-basis: 40%;
+        background-color: green;
+        height: 60%;
     }
 
+}
 
 
 
@@ -240,9 +296,10 @@ main{
 /* width 768px */
 
 @media screen and (min-width: 992px)  {
-
-
+    
+    
    /* header */
+
     .container{
         max-width: 1297px;
         margin: 0 auto;
@@ -271,6 +328,7 @@ main{
         margin: 7px;
         flex-grow: 1;
     }
+
     .jumbotron div:first-child{
         flex-basis: 58%;
         height: 407px;
@@ -279,19 +337,74 @@ main{
     }
 
     /* strategic planning */
-
-
+    
     .strategic-planning{
     display: flex;
     flex-direction: row;
     min-height: 800px;
-
     }
+
+
     /* partners */
+
+    .partner{
+        margin-bottom: 30px;
+    }
     .partner > div{
 
         height:300px;
     }
+
+    /* benefits */
+
+    .benefits{
+        display: flex;
+        flex-direction: row;
+        min-height: 633px;
+        padding-bottom: 30px;
+        margin-bottom: 50px;
+        
+    }
+
+    .benefits > div{
+         flex-basis: 24%;
+         height: 450px;
+         background-color: blue;
+         margin: 10px;
+         border-radius: 20px;
+         flex-grow: 1;
+    }
+
+     .bgbenefit h1{
+         text-align: center;
+         padding-top: 30px;
+         padding-bottom: 30px;
+        
+     }
+
+     /* about US */
+
+     .aboutus{
+        height: 800px;
+        display: flex;
+        flex-direction: row;
+        padding: 0 20px;
+        margin-top: 40px;
+    }
+    
+    .infoaboutus{
+        flex-basis: 60%;
+        background-color: red;
+    }
+    
+    .aboutuspic{
+      flex-basis: 40%;
+        background-color: green;
+        height: 60%;
+    }
+
+
+
 
 
 }
