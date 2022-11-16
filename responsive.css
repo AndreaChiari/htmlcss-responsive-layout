@@ -16,6 +16,7 @@
 .container{
     max-width: 980px;
     margin: 0 auto;
+    
 }
 
 .flex{
@@ -65,7 +66,9 @@ header{
 
 }
 /* main */
-
+main{
+    margin-top: 100px;
+}
 
 /*  jumbotron cards */
 
@@ -81,15 +84,16 @@ header{
 }
 
 .jumbotron > div{
-   width: 100%;
-    height: 420px;
+    width: 100%;
+    height: 300px;
     background-color: red;
     margin: 10px;
     border-radius: 20px;
 }
 
-div:first-child{
-    height: 608px;
+.jumbotron div:first-child{
+    min-height: 550px;
+    margin-top: 65px;
 }
 
 /* strategic planning */
@@ -99,10 +103,13 @@ div:first-child{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
 .strategic-planning > div{
-    width: 60%;
+    width: 100%;
     height: 640px;
     background-color: green;
     border-radius: 60px;
@@ -111,34 +118,119 @@ div:first-child{
 
 
 /* partners */
+.partner{
+    min-height: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:40px;
+    padding: 0 20px;
+    margin-top: 30px;
 
 
-/* responsive-mobile first */
+}
+
+.partner > div{
+    width: 100%;
+    height: 400px;
+    background-color: red;
+    margin: 10px;
+    border-radius: 60px;
+}
+
+/* benefits */
+
+.benefits{
+    min-height: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:40px;
+    padding: 0 20px;
+    margin-top: 40px;
+
+}
+
+.benefits > div{
+    width: 100%;
+    height: 300px;
+    background-color: blue;
+    margin: 10px;
+    border-radius: 20px;
+
+}
+
+
+
+
+
+
+
+/* responsive mobile-first */
 
 /*width 480px*/
 
 @media screen and (min-width: 480px)  {
+
+/* jumbotron */
 
     .jumbotron{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         align-items: baseline;
-        padding-top: 200px;
+        align-content: center;
+        
        
     }
     .jumbotron > div{
         flex-basis: 25%;
         height: 490px;
         margin: 7px;
+        flex-grow: 1;
     }
-    div:first-child{
+    .jumbotron div:first-child{
         flex-basis: 50%;
-        height: 490px;
+        min-height: 0px;
+        flex-grow: 1;
+        
     }
     
+    /* partners */
+    .partner{
+        min-height: 857px;
+    }
+    .partner > div{
+
+        height:195px;
+    }
+
+    /* benefits */
+
+    .benefits{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        min-height: 800px;
+        padding-bottom: 30px;
     
-    
+    }
+
+    .benefits > div{
+       flex-basis: 40%;
+        height: 300px;
+        background-color: blue;
+        margin: 10px;
+        border-radius: 20px;
+        
+    }
+    .bgcolorviolet h1{
+        text-align: center;
+        padding-top: 30px;
+       
+    }
     }
 
 
@@ -150,6 +242,12 @@ div:first-child{
 @media screen and (min-width: 992px)  {
 
 
+   /* header */
+    .container{
+        max-width: 1297px;
+        margin: 0 auto;
+        
+    }
     .navbar > i {
         display: none;
     }
@@ -165,14 +263,34 @@ div:first-child{
         margin-left: 30px;
     }
 
+    /* jumbotron */
+
     .jumbotron > div{
         flex-basis: 25%;
-        height: 490px;
+        height: 407px;
         margin: 7px;
+        flex-grow: 1;
     }
-    div:first-child{
-        flex-basis: 50%;
-        height: 490px;
+    .jumbotron div:first-child{
+        flex-basis: 58%;
+        height: 407px;
+        flex-grow: 1;
+        
+    }
+
+    /* strategic planning */
+
+
+    .strategic-planning{
+    display: flex;
+    flex-direction: row;
+    min-height: 800px;
+
+    }
+    /* partners */
+    .partner > div{
+
+        height:300px;
     }
 
 
