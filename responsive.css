@@ -118,31 +118,31 @@ div:first-child{
 
 @media screen and (min-width: 480px)  {
 
+    .jumbotron{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
+        padding-top: 200px;
+       
+    }
+    .jumbotron > div{
+        flex-basis: 25%;
+        height: 490px;
+        margin: 7px;
+    }
+    div:first-child{
+        flex-basis: 50%;
+        height: 490px;
+    }
+    
+    
+    
+    }
 
 
 
 
-.jumbotron{
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: baseline;
-    padding-top: 200px;
-   
-}
-.jumbotron > div{
-    flex-basis: 25%;
-    height: 490px;
-    margin: 7px;
-}
-div:first-child{
-    flex-basis: 50%;
-    height: 490px;
-}
-
-
-
-}
 
 /* width 768px */
 
