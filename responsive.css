@@ -28,8 +28,13 @@ button{
     border-radius: 30px;
     border: none;
     cursor: pointer;
+    line-height: 1px;
+    vertical-align: middle;
 }
 
+.font20{
+    font-size: 20px;
+}
 
 /* colors */
 
@@ -37,6 +42,17 @@ button{
     background-color: rgb(151,146,228);
 }
 
+.violet{
+    color: rgb(151,146,228);
+}
+
+#bgcolorwhite{
+    background-color: white;
+}
+
+#colorblack{
+    color: black;
+}
 /* header */
 
 header{
@@ -78,7 +94,6 @@ main{
 .jumbotron{
     min-height: 1200px;
     padding-top: 140px;
-    align-items: center;
     margin-bottom:30px;
     padding: 0 20px;
 }
@@ -87,17 +102,16 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-basis: calc(100% / 3);
+    flex-basis: calc(100% / 3 - 20px);
     background-color: rgb(181,221,255);
     border-radius: 20px;
     padding: 20px 20px 0px;
     text-align: center;
-    margin-bottom: 10px;
+    margin:10px;
 }
 
 .jumbotron div:first-child {
-    flex-basis: calc(100% / 3 * 2);
-    margin-top: 65px;
+    flex-basis: calc(100% / 3 * 2 - 20px);
     padding: 20px 20px 0px;
     text-align: left;
    
@@ -219,41 +233,50 @@ main{
 .developtext > button{
     border-radius: 50%;
     background-color: rgb(151,146,228);
-    height: 30px;
-    width: 30px;
+    height: 55px;
+    width: 55px;
     text-align: center;
     color: white;
     padding: 20px;
     font-size: 30px;
 }
-
-
-
-
-
-
-
-
-
 /* partners */
 .partner{
     min-height: 1200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin-bottom:40px;
     padding: 0 20px;
     margin-top: 30px;
-
-
 }
 
 .partner > div{
     width: 100%;
     height: 400px;
-    background-color: red;
+    background-color:  rgb(151,146,228);
     margin: 10px;
     border-radius: 60px;
+    color: white;
+    font-size: 20px;
+    line-height: 33px;
+    padding: 10px;
+}
+
+.roundimg{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+
+}
+.roundimg > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.partner >div > P{
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 /* benefits */
@@ -272,11 +295,41 @@ main{
 .benefits > div{
     width: 100%;
     height: 300px;
-    background-color: blue;
+    background-color:white;
     margin: 10px;
     border-radius: 20px;
-
+    padding:20px ;
 }
+
+.bgbenefit{
+    padding-top: 10px;
+}
+.bgbenefit > h1{
+    text-align: center;
+    padding: 0 20px;
+    color: white;
+}
+.benefits > div > h1{
+    font-size: 30px;
+}
+.benefits > div > h1,h2{
+    color: rgb(151,146,228);
+    margin-bottom: 10px;
+   
+} 
+.benefits > div > p{
+    margin-bottom: 20px;
+}
+
+.benefits > div > button{
+    padding:19px 33px;
+    background-color:  rgb(151,146,228);
+    color: white;
+    font-size: 20px;
+    
+}
+
+
 
 
 /* aboutus */
@@ -320,6 +373,7 @@ footer{
 
 @media screen and (min-width: 480px)  {
 
+
 /* jumbotron */
 
     .jumbotron{
@@ -327,18 +381,17 @@ footer{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: baseline;
-        align-content: center;
+      
     }
        
               
     .jumbotron > div{
-        flex-basis: calc(100% /3 -1rem);
+        flex-basis: calc(100% /3 - 20px);
     }
         
 
     .jumbotron div:first-child{
-        flex-basis: calc(100% / 3 * 2);
+        flex-basis: calc(100% / 3 * 2 - 20px);
         
     }
   
@@ -347,13 +400,33 @@ footer{
 
     .partner{
         min-height: 857px;
+        
     }
 
     .partner > div{
 
         height:195px;
     }
+    .card-partners{
+        padding-top: 10px;
+        display: flex;
+    }
+    .roundimg{
+        height: 143px;
+        width: 307px;
+        border-radius: 50%;
+        
+    }
 
+    .card-partners >div> p{
+       
+        margin-top: 20px;
+    }
+    .text-partners > h1,p{
+        margin-bottom: 40px;
+
+
+    }
     /* benefits */
 
     .benefits{
@@ -368,19 +441,22 @@ footer{
     }
 
     .benefits > div{
-       flex-basis: 40%;
-        height: 300px;
-        background-color: blue;
+        flex-basis: calc(100% / 3);
+        background-color: white;
         margin: 10px;
         border-radius: 20px;
         
     }
     .bgcolorviolet h1{
         text-align: center;
-        padding-top: 30px;
+        
        
     }
-    
+    .benefits > div > h1, h2 {
+        color: rgb(151,146,228);
+        margin-bottom: 0px;
+    }
+
     /* aboutus */
 
     .aboutus{
@@ -470,17 +546,33 @@ footer{
     .app-development{
         flex-basis: 27%;
      }
-    }
+    
 
     /* partners */
 
     .partner{
         margin-top: 30px;
     }
+
     .partner > div{
 
-        height:300px;
+        height:400px;
+        text-align: center;
+        padding: 20px;
     }
+
+    .info-partner > *{
+        margin-bottom: 40px;
+    }
+
+    .info-partner > p{
+        line-height: 30px;
+    }
+    .roundimg img{
+        height: 142%;
+        width: 202px;
+    }
+
 
     /* benefits */
 
@@ -496,7 +588,7 @@ footer{
     .benefits > div{
          flex-basis: 24%;
          height: 450px;
-         background-color: blue;
+         background-color: white;
          margin: 10px;
          border-radius: 20px;
          flex-grow: 1;
@@ -508,6 +600,11 @@ footer{
          padding-bottom: 30px;
         
      }
+    .benefits > div > h1{
+        font-size: 45px;
+        text-align: left;
+    }
+
 
      /* about US */
 
@@ -535,4 +632,13 @@ footer{
 
 
 }
+
+
+
+
+
+
+
+
+
 
