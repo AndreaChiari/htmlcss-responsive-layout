@@ -25,7 +25,7 @@
 
 button{
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 30px;
     border: none;
     cursor: pointer;
 }
@@ -47,6 +47,7 @@ header{
     left: 0%;
     color: white;
     padding: 0 20px;
+    z-index: 1;
 }
 
 .navbar{
@@ -69,15 +70,13 @@ header{
 /* main */
 
 main{
-    margin-top: 100px;
+    margin-top: 145px;
 }
 
 /*  jumbotron cards */
 
 .jumbotron{
     min-height: 1200px;
-    display: flex;
-    flex-direction: column;
     padding-top: 140px;
     align-items: center;
     margin-bottom:30px;
@@ -85,17 +84,71 @@ main{
 }
 
 .jumbotron > div{
-    width: 100%;
-    height: 300px;
-    background-color: red;
-    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: calc(100% / 3);
+    background-color: rgb(181,221,255);
     border-radius: 20px;
+    padding: 20px 20px 0px;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-.jumbotron div:first-child{
-    min-height: 550px;
+.jumbotron div:first-child {
+    flex-basis: calc(100% / 3 * 2);
     margin-top: 65px;
+    padding: 20px 20px 0px;
+    text-align: left;
+   
 }
+
+.jumbotron > div >h2{
+    color: rgb(0,132,253);
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.jumbotron > div >p{
+   
+    line-height: 30px;
+    color: rgb(90,110,127);
+    padding-bottom: 20px;
+    font-weight: 600;
+   
+}
+
+.jumbotron > div >button {
+    background-color:  rgb(0,132,253);
+    color: white;
+    text-align: center;
+    padding: 14px 30px;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-right: 80px;
+  
+    
+}
+
+.fa-apple{
+    margin-right: 10px;
+}
+
+.imgphone{
+    height:100%;
+    width: 100%;
+    
+}
+
+
+.jumbotron > div >.fa-solid {
+    text-align: center;
+    font-size: 80px;
+    color: rgb(0,132,253);
+}
+
 
 /* strategic planning */
 
@@ -109,13 +162,77 @@ main{
     margin-bottom: 30px;
 }
 
-.strategic-planning > div{
-    width: 100%;
-    height: 640px;
-    background-color: green;
-    border-radius: 60px;
-    margin: 10px;
+.planning{
+    flex-basis: 40%;
 }
+
+.app-development{
+    flex-basis: 60%;
+    border-radius: 60px;
+    margin-bottom: 10px;
+}
+ 
+   
+
+.planning div{
+    height: 50%;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.planning > div > img {
+    height: 100%;
+    width: 100%;
+}
+
+.app-development{
+    background-color: white;
+    padding: 20px;
+}
+.planning > div > h1{
+    margin-bottom: 30px;
+}
+
+
+.imgdevelop{
+    height: 50%;
+}
+
+.developtext{
+    height: 50%;
+    text-align: center;
+}
+
+.developtext > p{
+    line-height: 35px;
+}
+.imgdevelop > img{
+    height: 100%;
+    width: 100%;
+   
+}
+.developtext > h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.developtext > button{
+    border-radius: 50%;
+    background-color: rgb(151,146,228);
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
 
 
 /* partners */
@@ -206,27 +323,26 @@ footer{
 /* jumbotron */
 
     .jumbotron{
+        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         align-items: baseline;
         align-content: center;
-        
+    }
        
-    }
+              
     .jumbotron > div{
-        flex-basis: 25%;
-        height: 490px;
-        margin: 7px;
-        flex-grow: 1;
+        flex-basis: calc(100% /3 -1rem);
     }
+        
+
     .jumbotron div:first-child{
-        flex-basis: 50%;
-        min-height: 0px;
-        flex-grow: 1;
+        flex-basis: calc(100% / 3 * 2);
         
     }
-    
+  
+
     /* partners */
 
     .partner{
@@ -293,7 +409,7 @@ footer{
 
 
 
-/* width 768px */
+/* width 992px */
 
 @media screen and (min-width: 992px)  {
     
@@ -342,13 +458,24 @@ footer{
     display: flex;
     flex-direction: row;
     min-height: 800px;
+
     }
 
+    .planning{
+    flex-basis: 40%;
+    margin-right: 100px;
+    margin-left: 88px;
+    }
+
+    .app-development{
+        flex-basis: 27%;
+     }
+    }
 
     /* partners */
 
     .partner{
-        margin-bottom: 30px;
+        margin-top: 30px;
     }
     .partner > div{
 
